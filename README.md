@@ -98,9 +98,9 @@ git push -u origin master/main
 
 ```mermaid
 graph LR;
-	untracked -- "git add"    --> staged;
-	staged    -- "git commit" --> tracked/commited;
-	modified  -- "git add"    --> staged;
-	tracked   -- "изменение"  --> modified
+	untracked        -- "git add"    --> staged;
+	staged    	 -- "git commit" --> tracked/commited;
+	modified  	 -- "git add"    --> staged;
+	tracked/commited -- "изменение"  --> modified
 ```
 
