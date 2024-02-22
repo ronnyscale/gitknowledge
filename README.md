@@ -1,4 +1,8 @@
-## Памятка по git
+# Памятка по git
+
+---
+
+## Начало
 
 ---
 
@@ -70,3 +74,33 @@ git push -u origin master/main
 - "-u origib master/main" - пишем один раз и далее при последующих "пушах" просто "git push"
 
 ---
+
+## О файлах в папке .git
+
+## HEAD
+
+- Файл хранит в себе hash-код последнего добавленного коммита
+
+
+## Медиум
+
+### Команды
+
+- git log - выводит инфу о коммитах
+- git log --oneline - выводит краткую информацию о коммитах (помогает разобраться, если много коммитов)
+- статусы файлов:
+1. modified + git add = staged
+2. untracked - новый файл
+3. tracked - отслеживаемый файл
+
+### Схема
+
+
+```mermaid
+graph LR;
+	untracked -- "git add"    --> staged;
+	staged    -- "git commit" --> tracked/commited;
+	modified  -- "git add"    --> staged;
+	tracked   -- "изменение"  --> modified
+```
+
